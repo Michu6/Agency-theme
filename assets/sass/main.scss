@@ -1,0 +1,16 @@
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+@import 'base/_base';
+@import 'layouts/_header';
+
+#portfolio, #team {
+	background-color: $silver;
+}
+#portfolio img {
+	width: 100%;
+}
+
+#contactus {
+	background-color: black;
+	color: white;
+}

@@ -1,0 +1,31 @@
+// BASE
+body {
+	color: $darksilver;
+	font-family: $RobotoSlab;
+}
+section {
+	padding: 12% 0;
+	h2 {
+		color: $black;
+		font: bold 2.5em $Montserrat;
+	}
+	.subtit {
+		color: $darksilver;
+		font: italic 1em $DroidSerif;
+	}
+	h3 {
+		color: $black;
+		font: bold 1.3em $Montserrat;
+	}
+}
+.btn-yellow {
+	background-color: $yellow;
+	padding: 20px 40px;
+	font: 1.2em $Montserrat;
+	margin-top: 30px;
+}
+.social-media a{
+	&.social-circle {
+		@include socialcircle($black, 1em);
+	}
+}

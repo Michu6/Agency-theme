@@ -1,0 +1,125 @@
+//- HEADER
+mixin navbar-fixed-top(logolink, links)
+  .navbar-header
+    a.navbar-brand(href='#{logolink.url}') #{logolink.name}
+    button(type='button',class='navbar-toggle collapsed',data-toggle='collapse',data-target='#bs-example-navbar-collapse-1',aria-expanded='false')
+      span.sr-only Toggle navigation
+      span.icon-bar
+      span.icon-bar
+      span.icon-bar
+  .collapse.navbar-collapse#bs-example-navbar-collapse-1
+    ul.nav.navbar-nav.navbar-right
+      each link in links
+        li
+          a(href='#{link.url}') #{link.name}
+
+//- SECTION SERVICES
+mixin icon(iconservice)
+  case iconservice
+    when 'comerce'
+      a.socialcircle.fa.fa-shopping-cart
+    when 'responsive'
+      a.socialcircle.fa.fa-laptop
+    when 'web'
+      a.socialcircle.fa.fa-lock
+        
+mixin list-service(iconservice, servicetittle)
+  .col-md-4
+    +icon(iconservice)
+    h3= servicetittle
+    p= textlorem
+
+//- SECTION PORTFOLIO
+mixin urlpng(urlpng)
+  img(src="img/portfolio/" + urlpng + ".png")
+
+mixin portfoliobg(portfoliobg)
+  case portfoliobg
+    when 'bg1'
+      +urlpng ("roundicons")
+    when 'bg2'
+      +urlpng ("startup-framework")
+    when 'bg3'
+      +urlpng ("treehouse-preview")
+    when 'bg4'
+      +urlpng ("golden-preview")      
+    when 'bg5'
+      +urlpng ("escape-preview")
+    when 'bg6'
+      +urlpng ("dreams-preview")
+
+mixin portfoliolist(portfoliobg, portfoliotittle, portfoliosubtit)
+  .col-md-4
+    +portfoliobg(portfoliobg)
+    .bgwhite
+      h3= portfoliotittle
+      span.subtit= portfoliosubtit
+
+//- SECTION ABOUT
+mixin imageabout(image)
+  img.text-center(src= image)
+
+mixin timelineleft(image, text1, text2)
+  .row
+    .col-md-5
+      .timeline-text.text-right
+        h3= text1
+        h3= text2
+        p= textlorem
+    .col-md-2
+      .timeline-img
+      +imageabout(image)
+
+mixin timelineright(image, text1, text2)
+  .row
+    .col-md-offset-5.col-md-2
+      .timeline-img
+        +imageabout(image)
+    .col-md-5
+      .timeline-text.text-left
+        h3= text1
+        h3= text2
+        p= textlorem
+
+//- SECTION TEAM
+mixin teamimg(teamimg)
+  case teamimg
+    when 'person1'
+      img.circle(src="img/team/1.jpg")
+    when 'person2'
+      img.circle(src="img/team/2.jpg")
+    when 'person3'
+      img.circle(src="img/team/3.jpg")
+mixin social()
+  .social-media
+    a(href="#").social-circle.fa.fa-twitter
+    a(href="#").social-circle.fa.fa-facebook
+    a(href="#").social-circle.fa.fa-linkedin
+mixin team(teamimg, teamtittle, teamsubtit)
+  .col-md-4
+    +teamimg(teamimg)
+    h3= teamtittle
+    span.teamsubtit= "Lead" + " " + teamsubtit
+    +social()
+
+//- SECTION LOGO
+mixin logos(logoname)
+  .col-md-3
+    img(src="img/logos/" + logoname + ".jpg")
+
+//- SECTION CONTACT US
+mixin input(textinput)
+  .form-group
+    input.form-control(
+      placeholder= textinput
+    )
+mixin textarea()
+  .form-group
+    textarea.form-control(
+      placeholder= "YOUR MESSAGE*"
+    )
+
+//- footer
+mixin footerlinks(footerlinks)
+  li: a(href="#") #{footerlinks}
+  
