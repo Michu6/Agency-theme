@@ -18,6 +18,11 @@ section {
 		font: bold 1.3em $Montserrat;
 	}
 }
+a {
+	&:hover {
+		text-decoration: none;
+	}
+}
 .btn-yellow {
 	background-color: $yellow;
 	padding: 20px 40px;
@@ -26,6 +31,44 @@ section {
 }
 .social-media a{
 	&.social-circle {
-		@include socialcircle($black, 1em);
+		@include socialcircle($black, 1.2em);
+		margin: 0 2%;
+	}
+}
+.mt-5 {
+	margin-top: 5%;
+}
+.mt-10 {
+	margin-top: 10%;
+}
+#about {
+	.container {
+		&::before {
+           content: "";
+           border: 2px solid $silver;
+           position: absolute;
+           left: 50%;  
+           height: 1000px;        
+        }
+	}
+}
+#portfolio, #team {
+	background-color: $silver;
+}
+#portfolio img {
+	width: 100%;
+}
+#contactus {
+	background-color: black;
+	color: white;
+}
+#team {
+	.container {
+		.social-media {
+			margin-top: 20px;
+		}
+		p {
+			margin-top: 40px;
+		}
 	}
 }

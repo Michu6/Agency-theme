@@ -49,6 +49,30 @@ box-sizing: border-box;
 	}
 }
 
+@mixin navbarscroll (){
+	h1 {
+		color: $white;
+		@include text-shadow(2px, 3px, 6px, darken($yellow, 30%));
+		span {
+			@include text-shadow(2px, 3px, 6px, darken($yellow, 30%));
+		}
+	}
+}
+@mixin navbar-white (){
+	header .navbar ul {
+	padding-top: 50px;
+		li a {
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $yellow;
+			}
+			&.active {
+				color: $white;
+			}
+		}
+	}
+}
 @mixin imgcircle($imgborder) {
 	@include radius(100%);
 	border: 6px solid $imgborder;

@@ -60,7 +60,7 @@ mixin imageabout(image)
   img.text-center(src= image)
 
 mixin timelineleft(image, text1, text2)
-  .row
+  .row.mt-10
     .col-md-5
       .timeline-text.text-right
         h3= text1
@@ -71,7 +71,7 @@ mixin timelineleft(image, text1, text2)
       +imageabout(image)
 
 mixin timelineright(image, text1, text2)
-  .row
+  .row.mt-10
     .col-md-offset-5.col-md-2
       .timeline-img
         +imageabout(image)

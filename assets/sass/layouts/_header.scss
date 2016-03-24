@@ -1,10 +1,11 @@
-
 /* HEADER */
 header {
 	background: url('../../img/header-bg.jpg') 12% 30% fixed;
 	color: $white;
 	padding: 16% 0;
 	.navbar {
+		margin-bottom: 0;
+		padding-bottom: 10px;
 		.navbar-brand {
 			color: $yellow;
 			font: 2em $KaushanScript;
@@ -19,37 +20,14 @@ header {
 	}
 	.text-center {
 		span {
-			font: italic 2.5em $DroidSerif ;
+			font: italic 2.5em $DroidSerif;
 		}
 		h1 {
 			font: bold 5em $Montserrat;
 		}
 	}
 }
-@mixin navbarscroll (){
-	h1 {
-		color: $white;
-		@include text-shadow(2px, 3px, 6px, darken($yellow, 30%));
-		span {
-			@include text-shadow(2px, 3px, 6px, darken($yellow, 30%));
-		}
-	}
-}
-@mixin navbar-white (){
-	header .navbar ul {
-	padding-top: 50px;
-		li a {
-			color: $white;
-			&:hover {
-				background-color: $white;
-				color: $yellow;
-			}
-			&.active {
-				color: $white;
-			}
-		}
-	}
-}
+
 .nav-transparent {
 	@include navbarscroll();
 	@include transition(0.4);
@@ -60,76 +38,4 @@ header {
 .nav-black {
 	@include transition(0.4s);
 	background-color: $black;
-}
-
-// SECTION SERVICES
-.socialcircle {
-	@include socialcircle($yellow, 4em);
-}
-
-// SECTION PORTFOLIO
-.bgwhite {
-	background-color: $white;
-	padding: 5% 0;
-	h3 {
-		margin-top: 0;
-	}
-}
-
-// SECTION ABOUT US
-#about {
-	img {
-		width: 100%;
-		@include imgcircle($silver);
-	}
-}
-// SECTION TEAM
-#team {
-	.container {
-		.circle {
-			@include imgcircle($white);
-		}
-	}
-	p {
-		margin: 0 auto;
-		width: 65%;
-	}
-}
-
-// SECTION LOGOS
-#logos {
-	padding: 5%;
-}
-
-// CONTACT US
-
-#contactus {
-	h2 {
-		color: $white;
-	}
-}
-form  {
-	input.form-control {
-		font-family: $Montserrat;
-		padding-top: 30px;
-		padding-bottom: 30px;
-	}	
-}
-textarea.form-control {
-	font-family: $Montserrat;
-	padding-top: 20px;
-	padding-bottom: 30px;
-	height: 215px;
-	resize: none;
-}
-
-footer {
-	padding: 3% 0;
-	font-family: $Montserrat;
-	ul li {
-		display: inline-block;
-		a {
-			color: $yellow;
-		}
-	}
 }
