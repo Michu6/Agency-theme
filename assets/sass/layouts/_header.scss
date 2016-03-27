@@ -15,6 +15,10 @@ header {
 			li a {
 				color: $white;
 				font: 1em $Montserrat;
+				&:hover, &:focus {
+					background-color: transparent;
+					color: $yellow;
+				}
 			}
 		}
 	}
@@ -28,8 +32,21 @@ header {
 	}
 }
 
+.navbar-nav>.active {
+	a {
+		@include transition(0.2s);
+		@include radius(4px);
+		color: $black;
+		background-color: $yellow;
+		&:focus, &:hover {
+			color: $black;
+			background-color: $yellow;
+			@include transition(0.2s);
+		}
+	}  
+}
+
 .nav-transparent {
-	@include navbarscroll();
 	@include transition(0.4);
 	@include navbar-white();
 	background-color: transparent;
