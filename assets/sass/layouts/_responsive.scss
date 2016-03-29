@@ -1,0 +1,75 @@
+@media #{$width-small} {
+	header {
+		padding-top: 22%;
+		.navbar-toggle {
+			background-color: $yellow;
+			margin-top: 18px;
+			.icon-bar {
+				background-color: $black;
+			}
+		}
+		.text-center {
+			margin: 0 5%;
+		}
+	}
+	#portfolio {
+		.col-sm-4 {
+			margin-bottom: 15%;
+		}
+	}
+	#about {
+		.container {
+			&:before {
+				content: "";
+				border: 2px solid transparent;
+			}
+			h3:first-child {
+				color: $yellow;
+			}
+		}
+	}
+	#team {
+		.col-sm-4 {
+			margin-bottom: 15%;
+		}
+	}
+}
+
+@media #{$width-medium} {
+	#about {
+		.container {
+			&:before {
+				content: "";
+				border: 2px solid transparent;
+			}
+			h3:first-child {
+				color: $black;
+			}
+		}
+	}
+}
+
+@media #{$width-large} {
+	#portfolio {
+		.col-sm-4 {
+			margin-bottom: 3%;
+		}
+	}
+	#about {
+		.container {
+			&:before {
+				content: "";
+				border: 2px solid $silver;
+			}
+			h3:first-child {
+				color: $black;
+			}
+		}
+	}
+	#team {
+		.col-sm-4 {
+			margin-bottom: 2%;
+		}
+	}
+}
+

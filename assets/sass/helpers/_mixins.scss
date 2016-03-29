@@ -49,15 +49,6 @@ box-sizing: border-box;
 	}
 }
 
-@mixin navbarscroll (){
-	h1 {
-		color: $white;
-		@include text-shadow(2px, 3px, 6px, darken($yellow, 30%));
-		span {
-			@include text-shadow(2px, 3px, 6px, darken($yellow, 30%));
-		}
-	}
-}
 @mixin navbar-white (){
 	header .navbar ul {
 	padding-top: 50px;
@@ -87,6 +78,11 @@ box-sizing: border-box;
 	display: inline-block;
 	width: 1.7em;
 	height: 1.7em;
-	line-height: 1.7em;
+	line-height: 1.9em;
 	vertical-align: middle;
+	&:hover {
+		@include transition(0.2s);
+		background-color: $yellow;
+		color: $black;
+	}
 }

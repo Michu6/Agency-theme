@@ -3,6 +3,9 @@ body {
 	color: $darksilver;
 	font-family: $RobotoSlab;
 }
+.container {
+	width: 90%;
+}
 section {
 	padding: 12% 0;
 	h2 {
@@ -24,10 +27,14 @@ a {
 	}
 }
 .btn-yellow {
+	@include transition(0.2s);
 	background-color: $yellow;
 	padding: 20px 40px;
 	font: 1.2em $Montserrat;
 	margin-top: 30px;
+	&:hover {
+		@include shadow-inset(5px, 5px, 5px, darken($yellow, 25));
+	}
 }
 .social-media a{
 	&.social-circle {

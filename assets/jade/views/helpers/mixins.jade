@@ -11,7 +11,7 @@ mixin navbar-fixed-top(logolink, links)
     ul.nav.navbar-nav.navbar-right
       each link in links
         li
-          a(href='#{link.url}') #{link.name}
+          a.active(href='#{link.url}') #{link.name} 
 
 //- SECTION SERVICES
 mixin icon(iconservice)
@@ -24,7 +24,7 @@ mixin icon(iconservice)
       a.socialcircle.fa.fa-lock
         
 mixin list-service(iconservice, servicetittle)
-  .col-md-4
+  .col-sm-4.col-md-4
     +icon(iconservice)
     h3= servicetittle
     p= textlorem
@@ -49,7 +49,7 @@ mixin portfoliobg(portfoliobg)
       +urlpng ("dreams-preview")
 
 mixin portfoliolist(portfoliobg, portfoliotittle, portfoliosubtit)
-  .col-md-4
+  .col-sm-4.col-md-4
     +portfoliobg(portfoliobg)
     .bgwhite
       h3= portfoliotittle
@@ -61,21 +61,21 @@ mixin imageabout(image)
 
 mixin timelineleft(image, text1, text2)
   .row.mt-10
-    .col-md-5
+    .col-xs-12.col-sm-5
       .timeline-text.text-right
         h3= text1
         h3= text2
         p= textlorem
-    .col-md-2
+    .hidden-xs.col-sm-2
       .timeline-img
       +imageabout(image)
 
 mixin timelineright(image, text1, text2)
   .row.mt-10
-    .col-md-offset-5.col-md-2
+    .hidden-xs.col-sm-offset-5.col-sm-2
       .timeline-img
         +imageabout(image)
-    .col-md-5
+    .col-xs-12.col-sm-5
       .timeline-text.text-left
         h3= text1
         h3= text2
@@ -96,7 +96,7 @@ mixin social()
     a(href="#").social-circle.fa.fa-facebook
     a(href="#").social-circle.fa.fa-linkedin
 mixin team(teamimg, teamtittle, teamsubtit)
-  .col-md-4
+  .col-sm-4
     +teamimg(teamimg)
     h3= teamtittle
     span.teamsubtit= "Lead" + " " + teamsubtit
@@ -104,7 +104,7 @@ mixin team(teamimg, teamtittle, teamsubtit)
 
 //- SECTION LOGO
 mixin logos(logoname)
-  .col-md-3
+  .col-sm-3
     img(src="img/logos/" + logoname + ".jpg")
 
 //- SECTION CONTACT US
