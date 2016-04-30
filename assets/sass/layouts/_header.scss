@@ -1,0 +1,58 @@
+/* HEADER */
+header {
+	background: url('../../img/header-bg.jpg') 12% 30% fixed;
+	color: $white;
+	padding: 16% 0;
+	.navbar {
+		margin-bottom: 0;
+		padding-bottom: 10px;
+		.navbar-brand {
+			color: $yellow;
+			font: 2em $KaushanScript;
+		}
+		ul {
+			margin-top: 1.1%;
+			li a {
+				color: $white;
+				font: 1em $Montserrat;
+				&:hover, &:focus {
+					background-color: transparent;
+					color: $yellow;
+				}
+			}
+		}
+	}
+	.text-center {
+		span {
+			font: italic 2.5em $DroidSerif;
+		}
+		h1 {
+			font: bold 5em $Montserrat;
+		}
+	}
+}
+
+.navbar-nav>.active {
+	a {
+		@include transition(0.2s);
+		@include radius(4px);
+		color: $black;
+		background-color: $yellow;
+		&:focus, &:hover {
+			color: $black;
+			background-color: $yellow;
+			@include transition(0.2s);
+		}
+	}  
+}
+
+.nav-transparent {
+	@include transition(0.4);
+	@include navbar-white();
+	background-color: transparent;
+}
+
+.nav-black {
+	@include transition(0.4s);
+	background-color: $black;
+}

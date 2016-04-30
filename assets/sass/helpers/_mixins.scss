@@ -1,0 +1,88 @@
+@mixin radius($radius) {
+-webkit-border-radius: $radius;
+-moz-border-radius: $radius;
+border-radius: $radius;
+}
+
+@mixin shadow($x, $y, $blur, $color) {
+-webkit-box-shadow: $x $y $blur $color;
+-moz-box-shadow: $x $y $blur $color;
+box-shadow: $x $y $blur $color;
+}
+@mixin text-shadow($x, $y, $blur, $color) {
+-webkit-text-shadow: $x $y $blur $color;
+-moz-text-shadow: $x $y $blur $color;
+text-shadow: $x $y $blur $color;
+}
+
+@mixin shadow-inset($x, $y, $blur, $color) {
+-webkit-box-shadow: inset $x $y $blur $color;
+-moz-box-shadow: inset $x $y $blur $color;
+box-shadow: inset $x $y $blur $color;
+}
+
+@mixin transition($trans-time) {
+-webkit-transition: all $trans-time ease-out;
+-moz-transition: all $trans-time ease-out;
+-o-transition: all $trans-time ease-out;
+transition: all $trans-time ease-out;
+}
+
+@mixin box-sizing {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+@mixin placeholder(){
+	::-webkit-input-placeholder {
+	   color: $yellow;
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	   color: $yellow;  
+	}
+	::-moz-placeholder {  /* Firefox 19+ */
+	   color: $yellow;  
+	}
+	:-ms-input-placeholder {  
+	   color: $yellow;  
+	}
+}
+
+@mixin navbar-white (){
+	header .navbar ul {
+	padding-top: 50px;
+		li a {
+			color: $white;
+			&:hover {
+				background-color: $white;
+				color: $yellow;
+			}
+			&.active {
+				color: $white;
+			}
+		}
+	}
+}
+@mixin imgcircle($imgborder) {
+	@include radius(100%);
+	border: 6px solid $imgborder;
+}
+
+@mixin socialcircle($bgcolor, $fontsize){
+	@include radius(100%);
+	background-color: $bgcolor;
+	color: white;
+	font-size: $fontsize;
+	position: relative;
+	display: inline-block;
+	width: 1.7em;
+	height: 1.7em;
+	line-height: 1.9em;
+	vertical-align: middle;
+	&:hover {
+		@include transition(0.2s);
+		background-color: $yellow;
+		color: $black;
+	}
+}

@@ -1,0 +1,59 @@
+// SECTION SERVICES
+.socialcircle {
+	@include socialcircle($yellow, 4em);
+}
+
+// SECTION PORTFOLIO
+.bgwhite {
+	background-color: $white;
+	padding: 5% 0;
+	h3 {
+		margin-top: 0;
+	}
+}
+
+// SECTION ABOUT US
+#about {
+	img {
+		width: 100%;
+		@include imgcircle($silver);
+	}
+}
+// SECTION TEAM
+#team {
+	.container {
+		.circle {
+			@include imgcircle($white);
+		}
+	}
+	p {
+		margin: 0 auto;
+		width: 65%;
+	}
+}
+
+// SECTION LOGOS
+#logos {
+	padding: 5%;
+}
+
+// CONTACT US
+#contactus {
+	h2 {
+		color: $white;
+	}
+}
+form  {
+	input.form-control {
+		font-family: $Montserrat;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}	
+}
+textarea.form-control {
+	font-family: $Montserrat;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	height: 215px;
+	resize: none;
+}
